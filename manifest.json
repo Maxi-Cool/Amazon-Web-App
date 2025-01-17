@@ -1,0 +1,15 @@
+{
+    "name": "Amazon Helper App",
+    "version": "1.0.0.0",
+    "manifest_version": 3,
+    "description": "Extension to help manage your purchases and returns on Amazon",
+    "action": {
+        "defult_icon": "ben.png",
+        "default_popup": "index.html"
+    }
+
+
+
+
+
+}
