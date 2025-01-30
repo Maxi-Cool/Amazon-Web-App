@@ -1,30 +1,49 @@
-var button = document.querySelector('button');
-var picture = document.getElementById('pic1');
-console.log("B");
-const fred = ["https://cdn.britannica.com/86/192386-050-D7F3126D/Muhammad-Ali-American.jpg?w=400&h=300&c=crop",
-             "https://upload.wikimedia.org/wikipedia/commons/9/97/John_Cena_2024.jpg",
-             "https://media.printables.com/media/prints/903364/images/6906916_46ed27fe-2e40-45dc-91fb-3b791e528828_d0e09326-20bd-4a5b-a7ee-474b0b20cea9/thumbs/inside/1280x960/jpg/dwayne-johnson-eyebrow-raise-meme-10.webp",
-             "https://hips.hearstapps.com/hmg-prod/images/patrick-mahomes-of-the-kansas-city-chiefs-looks-on-from-the-news-photo-1706735048.jpg?crop=0.657xw:0.985xh;0.148xw,0&resize=640:*"
-];
+document.getElementById("Purchase").addEventListener("click",function(){
+    document.getElementById('main').innerHTML = `
+    <p>Page 2</p>
+    <button id="2">next</button>
+    `;
+    document.getElementById('buttons').innerHTML = `
+    <p>Page return</p>
+    <button id="ret1">Return</button>
+    `;
+    document.getElementById("ret1").addEventListener("click",function(){
+        
+        document.getElementById('main').innerHTML = `
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/97/John_Cena_2024.jpg" class="branding"/>
+        <h1 class="title">Amazon Web App</h1>
+        `;   
+        
+        
+            
+        
+        document.getElementById('buttons').innerHTML = `
+        <button id="Returns" class="Return">Returns!</button>
+      <button id="Purchase" class="Purchases">Purchases!</button>
+    `;
+        });
 
-// function fred( num, kjlkj){
-//     this.number = num;
-// }
-
-let picIndex = 1;
-
-function ChangePicture(){
-    console.log("A");
-    picIndex = picIndex + 1;
-    if (picIndex>fred.length-1){
-        picIndex =0;
-
-    }
-    picture.src = fred[picIndex];
 
 
-}
+    document.getElementById("2").addEventListener("click",function(){
+        document.getElementById('main').innerHTML = `
+        <p>Page 3</p>
+        <button id="3">next</button>
+        `;
+        document.getElementById("3").addEventListener("click",function(){
+            document.getElementById('main').innerHTML = `
+            <p>Page final</p>
+            `;     
+        });
+    });
+});
 
-document.getElementById('change').addEventListener('click',function(){
-    ChangePicture();
-})
+document.getElementById("Returns").addEventListener("click",function(){
+    document.getElementById('main').innerHTML = `
+    
+    `;
+
+    document.getElementById('buttons').innerHTML = `
+    <p>Page return</p>
+    `;
+});

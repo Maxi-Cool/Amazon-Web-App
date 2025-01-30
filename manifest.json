@@ -6,10 +6,10 @@
     "action": {
         "defult_icon": "ben.png",
         "default_popup": "index.html"
-    }
+    },
 
-
-
-
-
+    "content_scripts": [ {
+        "css": [ "main.css" ],
+        "matches": [ "http://www.google.com/*" ]
+     } ]
 }
